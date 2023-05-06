@@ -3,7 +3,7 @@ import { useQuery, useMutation } from "react-query";
 import { Box, Heading, Flex } from "rebass/styled-components";
 import { getBook, updateBook } from "../api";
 import { useParams, useHistory } from "react-router-dom"
-import Loader from "react-loader-spinner"
+import { ThreeDots } from "react-loader-spinner"
 
 export const UpdateBook = () => {
   const { id } = useParams()
@@ -20,7 +20,7 @@ export const UpdateBook = () => {
     return (
       <Container>
         <Flex py="5" justifyContent="center">
-          <Loader type="ThreeDots" color="#cccccc" height={30} />
+          <ThreeDots type="ThreeDots" color="#cccccc" height={30} />
         </Flex>
       </Container>
     );
